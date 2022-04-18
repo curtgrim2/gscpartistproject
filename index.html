@@ -1,0 +1,494 @@
+<!DOCTYPE>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+background-image:url(3Dmist5.png);
+background-size: cover;
+transition: opacity .5s;
+animation: fadeIn 2s;
+animation: backgroundScroll 10s linear infinite;
+animation-fill-mode: forwards;
+}
+
+
+
+@keyframes backgroundScroll {
+/*from {background-position: 0 0;}
+to {background-position: -360px 0px;}*/
+
+from {background-position: 0 0;}
+to {background-position: -180px 0px;}
+
+}
+
+
+@keyframes downer2{
+
+  0%{
+    opacity:0;
+    transform:translate(50px,-60px); /*-250*/
+  }
+
+  100%{
+    opacity:1;
+    transform:translate(0px,0px);
+  }
+
+}
+
+@keyframes downer3{
+
+  0%{
+    opacity:0;
+    transform:translate(0px,-50px); /*0px*/
+  }
+
+  100%{
+    opacity:1;
+    transform:translate(0px,0px);
+  }
+
+}
+
+@keyframes downer4{
+
+  0%{
+    opacity:0;
+    transform:translate(-50px,-60px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translate(0px,0px);
+  /*  transform:translate(0,-10pxx);*/
+  }
+
+}
+
+
+
+
+
+
+@keyframes downtwo1{
+  0%{
+    opacity:0;
+    transform:translate(0px,-50px);
+  }
+
+
+
+  100%{
+    opacity:1;
+    transform:translate(0px,0px);
+  }
+}
+
+@keyframes downtwo2{
+0%{
+  opacity:0;
+  transform:translateY(-100px);
+}
+
+50{
+  opacity:.05;
+
+}
+
+100%{
+  opacity:1;
+  transform:translateY(0px);
+}
+
+}
+
+@keyframes downtwo3 {
+  0%{
+    opacity:0;
+    transform:translateY(-150px);
+  }
+
+  50{
+    opacity:.1;
+
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0px);
+  }
+}
+
+@keyframes no {
+
+
+  100%{
+    opacity:1;
+    transform:translateY(0px);
+  }
+}
+
+
+
+div{
+  color:white;
+  display:inline-block;
+  float:left;
+  /*font-family: "Trebuchet MS";*/
+  }
+
+.overall{
+  /*width:1000px;*/
+width:90%;
+/*transform:translateX(5%);*/
+text-align: center;
+/*margin-left:50px;*/
+}
+
+.soc{
+/*border: 1px solid red;*/
+  width:30%;
+  font-size:40px;
+padding-top:15px;
+text-align: center;
+cursor:pointer;
+
+}
+
+.soc .dropdown a{
+  display:none;
+
+}
+
+
+
+.soc:hover .x{
+  display:block;
+animation: downtwo2 1.5s;
+margin-top:10px;
+
+}
+
+.soc:hover .y{
+  display:block;
+animation: downtwo1 1.5s;
+}
+
+.soc:hover .z{
+  display:block;
+animation: downtwo3 1.5s;
+}
+
+
+.dropdown{
+  /*position:absolute;
+  transform:translateX(-80px);*/
+
+  /*margin-top:6px;*/
+  padding-top:6px;
+  margin-left:180px;
+
+
+
+}
+
+.dropdown a{
+  padding: 12px 16px;
+  text-decoration:none;
+  display:inline-block;
+  text-align:left;
+  width:30%;
+  font-size: 25px;
+  cursor:pointer;
+  margin-left: 5px;
+
+}
+
+
+h{
+  margin-left:100px;
+}
+
+
+.personalw{
+  /*border: 1px solid red;*/
+  width:23%;
+text-align: center;
+  padding: 15px;
+  font-size:40px;
+cursor:pointer;
+}
+
+.personalw:hover{
+  text-shadow:1px 1px 2px black, 0px 0px 25px #99ffeb, 0 0 5px #00cca3;
+}
+
+
+.aboutme{
+/*border: 1px solid red;*/
+width:23%;
+text-align: center;
+padding: 15px;
+font-size:40px;
+cursor:pointer;
+
+}
+
+.aboutme:hover{
+  text-shadow:1px 1px 2px black, 0px 0px 25px #99ffeb, 0 0 5px #00cca3;
+}
+
+.extra{
+  /*border: 1px solid red;*/
+  padding: 15px;
+  width:23%;
+text-align: center;
+  font-size: 40px;
+cursor:pointer;
+
+}
+
+
+
+.name{
+  margin-top: 15%;
+  margin-bottom:5%;
+  font-size: 55px;
+  width:90%;
+  transform:translateX(5%);
+  text-align: center;
+  font-family: "Trebuchet MS";
+
+}
+
+
+.theextras{
+  /*position:absolute;*/
+  margin-left: 30px;
+  display:none;
+
+}
+
+.theextras a{
+  padding: 12px 16px;
+  display:block;
+  text-decoration:none;
+  cursor:pointer;
+  font-size: 30px;
+  /*font-family: "Trebuchet MS";*/
+}
+
+.extra:hover .theextras{
+  display:block;
+}
+
+a:hover{
+  text-shadow:1px 1px 2px black, 0px 0px 25px #99ffeb, 0 0 5px #00cca3;
+}
+
+.extra:hover  .a{
+  display:block;
+  animation: downtwo1 1.5s;
+}
+
+.extra:hover .b{
+  display:block;
+  animation: downtwo2 1.5s;
+}
+
+.extra:hover .c{
+  display:block;
+  animation: downtwo3 1.5s;
+}
+
+
+@media only screen and (max-width: 700px){
+  .soc{
+  width:100%;
+  text-align: left;
+  }
+
+  h{
+    /*display:none;*/
+  }
+
+  .dropdown a{
+    font-size: 30px;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+  .dropdown .x{
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+
+  .personalw{
+  width:100%;
+  text-align: left;
+  }
+  .aboutme{
+  width:100%;
+  text-align: left;
+  }
+
+  .extra{
+    width:100%;
+    text-align: left;
+  }
+
+  .soc {
+    margin:0px;
+    width:100%;
+    text-align: left;
+  }
+
+  .soc h{
+    margin:0px;
+  }
+
+
+  .soc .dropdown .x{
+    /*transform: translate(0,500px);*/
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+  .soc .dropdown .y{
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+  .soc .dropdown .z{
+
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+  .soc:hover a{
+
+
+  }
+
+  .soc a{
+  /*  padding:5px;
+    margin:10px;
+    margin-top:10px;
+    margin-bottom:10px;*/
+
+  }
+
+  .soc:hover .x{
+
+    animation: no 1.5s
+
+
+  }
+
+  .soc:hover .y{
+animation: no 1.5s
+
+  }
+
+  .soc:hover .z{
+animation: no 1.5s
+
+  }
+
+  .soc .dropdown a{
+    display:inline;
+  }
+
+
+}
+  
+  .doss{
+    
+    color:white;
+  }
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+*{
+box-sizing: border-box;
+
+}
+
+div{
+
+}
+
+</style>
+
+
+<body>
+
+  <!--<div>
+    Last Website Update: 11/7 <br><br>
+        Pages under redesign:
+    <ul>
+     <li>About Me </li>
+     <li>Extracurricular </li>
+
+</ul>
+</div>-->
+
+<div class = "name">
+CURTIS GRIMSLEY II
+</div>
+
+<!--<img src = "cgii.gif"/>-->
+
+<br>
+
+<div class = "overall">
+<div class = "soc">
+<h>Socials</h>
+<br>
+<div class = "dropdown">
+  <a class = "y" href = "https://www.sololearn.com/profile/8759553">SoloLearn</a>
+<a class = "x" href = "https://www.linkedin.com/in/curtis-grimsley-ii-708a29174/">Linkedin </a>
+<a class = "z" href = "https://github.com/curtgrim2">GitHub </a>
+
+</div>
+</div>
+
+<div class = "personalw">
+<a  href = "websitedescription.html">
+   Site Description  </a>
+</div>
+
+<div class = "aboutme">
+<a href = "aboutme.html">About Me </a>
+</div>
+<!--</div>
+-->
+
+<div class = "extra">
+<a href = "extracurricular.html"> Extracurricular </a>
+<br>
+<!--<div class = "theextras">
+<a class = "a">Coding Events  </a>
+<a class = "b">Internships  </a>
+<a class = "c">Jobs  </a>
+  
+</div>-->
+  
+  <a class = "doss" href = "dosshw.json">jjjjjjjjjjjj</a>
+</div>
+
+
+
+</body>
+
+
+
+</html>
